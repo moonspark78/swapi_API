@@ -1,0 +1,51 @@
+/* App.css (ou tout autre fichier CSS que vous utilisez) */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+  
+.container {
+    max-width: 800px;
+    margin: 20px;
+}
+  
+h2 {
+    text-align: center;
+    color: #333;
+}
+  
+ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 15px;
+}
+  
+li {
+    text-align: center;
+}
+  
+h3 {
+    margin-bottom: 8px;
+    color: #007bff;
+}
+  
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+@media screen and (max-width: 768px) {
+    ul {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 2fr)); /* Ajuster pour des écrans plus petits */
+    }
+  }
