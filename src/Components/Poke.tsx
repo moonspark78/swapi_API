@@ -9,8 +9,20 @@ interface Pokemon{
 }
 
 export const Poke = () => {
-    const pokemonData = useState<Pokemon[]>([])
+    const [pokemonData, setPokemonData] = useState<Pokemon[]>([])
 
+    useEffect(() =>{
+        const fetchData = async () =>{
+            try {
+                const response= await fetch('https://pokeapi.co/api/v2/pokemon/')
+                console.log(response);
+                
+            } catch (error) {
+                
+            }
+        }
+        fetchData();
+    },[])
 
 
 
