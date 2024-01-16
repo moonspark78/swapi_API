@@ -39,6 +39,17 @@ export const Poke = () => {
 
 
   return (
-    <div>Poke</div>
+    <div>
+        <h1>Pokémon List</h1>
+        <ul>
+            {
+                pokemonData.map((pokemon, index) => (
+                    <li key={index}>
+                        <p>{pokemon.name}</p>
+                        <img src={pokemon.image} alt="image_pokemon" />
+                    </li>
+            ))}
+        </ul>
+    </div>
   )
 }
