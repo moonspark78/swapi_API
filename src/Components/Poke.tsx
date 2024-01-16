@@ -2,10 +2,8 @@ import React, {useEffect, useState} from 'react'
 import "./Poke.css"
 
 interface Pokemon{
-    name: string,
-    sprites:{
-        front_default: string;
-    }
+    name: string;
+    sprites: string;
 }
 
 export const Poke = () => {
@@ -15,6 +13,7 @@ export const Poke = () => {
         const fetchData = async () =>{
             try {
                 const response= await fetch('https://pokeapi.co/api/v2/pokemon/')
+                const data = await response.json();
                 console.log(response);
                 
             } catch (error) {
