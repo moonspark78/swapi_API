@@ -29,6 +29,8 @@ export const Poke = () => {
 
                 data.results.forEach(fetchPokemonDetails);
                 setPokemonData(pokemonList)
+                console.log(pokemonList);
+                
             } catch (error) {
                 console.error('Error fetching Pokemon data:', error);
             }
@@ -46,10 +48,10 @@ export const Poke = () => {
                 pokemonData.map((pokemon, index) => (
                     <li key={index}>
                         <p>{pokemon.name}</p>
-                        <img src={pokemon.image} alt="image_pokemon" />
                     </li>
             ))}
         </ul>
     </div>
   )
 }
+
